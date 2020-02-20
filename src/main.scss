@@ -1,0 +1,54 @@
+.main-header {
+	width: 100%;
+	font-family: Avenir;
+	font-size: 28pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: default;
+	color: white;
+	background-color: #444455;
+	padding: 20px 0;
+}
+
+.main-summary {
+	padding: 20px 80px;
+	color: white;
+}
+
+.column-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.column-option {
+		width: 270px;
+		height: 400px;
+		border: 2px solid #3d3b36;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 10px;
+		font-size: 16pt;
+		transition: all .2s ease-in-out;
+
+		&.twitch {
+			background-color: lavender;
+		}
+
+		&.pro {
+			width: 350px;
+			background-color: salmon;
+		}
+
+		&.music {
+			background-color: lightgoldenrodyellow;
+		}
+
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.05);
+		}
+	}
+}
