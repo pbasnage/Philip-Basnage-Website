@@ -8,7 +8,19 @@ function Square(props) {
       {props.value}
     </button>
   );
-} //test
+}
+
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    document.title = "Philip Basnage";
+  }
+  render() {
+    return (
+      <Game/ >
+    );
+  }
+}
 
 class Board extends React.Component {
   renderSquare(i) {
@@ -125,7 +137,7 @@ class Game extends React.Component {
 
 // ========================================
 
-ReactDOM.render(<Game />, document.getElementById("root"));
+ReactDOM.render(<Main />, document.getElementById("root"));
 
 function calculateWinner(squares) {
   const lines = [
