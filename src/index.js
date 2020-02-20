@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import { MainInfo } from './main.js';
 
 function Square(props) {
   return (
@@ -17,7 +18,10 @@ class Main extends React.Component {
   }
   render() {
     return (
-      <Game/ >
+      <div>
+        <MainInfo/>
+        <Game/>
+      </div>
     );
   }
 }
