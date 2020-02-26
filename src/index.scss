@@ -1,7 +1,9 @@
+@import './common.scss';
+
 body {
   font-family: Avenir;
   margin: 0 !important;
-  background-color: #F5F5F5;
+  background-color: $myoffwhite;
 }
 
 ol, ul {
