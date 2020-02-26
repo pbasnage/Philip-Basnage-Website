@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.scss';
+import { MainProps } from './interfaces/main.interface';
 
-export class MainInfo extends React.Component<{}> {
-    constructor(props: any) {
+export class MainInfo extends React.Component<MainProps> {
+    constructor(props: MainProps) {
         super(props);
         document.title = 'Philip Basnage';
     }

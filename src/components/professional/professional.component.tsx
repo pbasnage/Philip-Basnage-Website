@@ -37,7 +37,7 @@ export class Professional extends React.Component {
                             <div className="panel-body">
                                 Graduated from Lehigh University in May 2017 with a Bachelor's
                                 of Science degree in Computer Science from PC Rossin College of
-                                Engineering and Applied Science.
+                                Engineering and Applied Science. Awarded Dean's List multiple semesters.
                             </div>
                         </div>
                         <img src={LehighCrest} alt="" className="lehigh-crest"/>
