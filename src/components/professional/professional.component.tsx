@@ -4,6 +4,7 @@ import { ProfessionalProps } from '../../interfaces/professional.interface';
 import '../../main.scss';
 import './professional.component.scss';
 import LehighCrest from '../../images/lehighcrest.png';
+import ProfilePic from '../../images/proftmp.png';
 
 export class Professional extends React.Component {
 
@@ -17,6 +18,16 @@ export class Professional extends React.Component {
                 <div className="main-header">
                     Philip Basnage: Professional
                     <div className="back-button" onClick={this.goToMain}>&lt;&nbsp;HOME</div>
+                </div>
+                <div className="main-info">
+                    <img src={ProfilePic} alt="" className="profile"/>
+                    <div className="contact-info">
+                        <div className="title">Contact Information</div>
+                        <div>pbasnage@gmail.com</div>
+                        <div>LinkedIn: https://www.linkedin.com/in/philipbasnage/</div>
+                        <div>Github: https://github.com/pbasnage/Philip-Basnage-Website</div>
+                        <div>San Mateo, California</div>
+                    </div>
                 </div>
                 <div className="panels-container">
                     <div className="panel">
