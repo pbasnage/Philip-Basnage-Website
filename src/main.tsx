@@ -24,7 +24,7 @@ export class MainInfo extends React.Component<MainProps, MainState> {
                     side projects, which I&apos;m equally passionate about.
                 </div>
                 <div className="column-wrapper">
-                    <div className={this.state.twitchHovered ? 'column-option twitch hover' : 'column-option twitch'}
+                    <div className='column-option twitch'
                         onMouseEnter={() => this.setTwitchHovered(true)}
                         onMouseLeave={() => this.setTwitchHovered(false)}>
                             Content Creator
@@ -32,8 +32,17 @@ export class MainInfo extends React.Component<MainProps, MainState> {
                                 Coming Soon!
                             </div>
                     </div>
-                    <div className="column-option pro" onClick={this.goTo.bind(this, '/professional')}>Professional</div>
-                    <div className="column-option music">Musician</div>
+                    <div className="column-option pro" onClick={this.goTo.bind(this, '/professional')}>
+                        Professional
+                    </div>
+                    <div className="column-option music" 
+                        onMouseEnter={() => this.setMusicHovered(true)}
+                        onMouseLeave={() => this.setMusicHovered(false)}>
+                            Musician
+                            <div className={this.state.musicHovered ? 'coming-soon show' : 'coming-soon'}>
+                                Coming Soon!
+                            </div>
+                    </div>
                 </div>
             </div>
         );
@@ -42,6 +51,12 @@ export class MainInfo extends React.Component<MainProps, MainState> {
     setTwitchHovered(hovering: boolean): void {
         this.setState({
             twitchHovered: hovering,
+        });
+    }
+
+    setMusicHovered(hovering: boolean): void {
+        this.setState({
+            musicHovered: hovering,
         });
     }
 
