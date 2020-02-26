@@ -36,6 +36,22 @@
 
 		&.twitch {
 			background-color: $twitchpurple;
+			position: relative;
+			.coming-soon {
+				transition: all .3s ease-in-out;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: lightgrey;
+				opacity: 0;
+				color: black;
+				&.show {
+					opacity: 1;
+				}
+			}
 		}
 
 		&.pro {

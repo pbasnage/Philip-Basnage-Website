@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.scss';
-import { MainProps } from './interfaces/main.interface';
+import { MainProps, MainState } from './interfaces/main.interface';
 
-export class MainInfo extends React.Component<MainProps> {
+export class MainInfo extends React.Component<MainProps, MainState> {
     constructor(props: MainProps) {
         super(props);
         document.title = 'Philip Basnage';
+        this.state = {
+            twitchHovered: false,
+            musicHovered: false,
+        };
     }
+
     render(): JSX.Element {
         return (
             <div>
@@ -19,12 +24,25 @@ export class MainInfo extends React.Component<MainProps> {
                     side projects, which I&apos;m equally passionate about.
                 </div>
                 <div className="column-wrapper">
-                    <div className="column-option twitch">Content Creator</div>
+                    <div className={this.state.twitchHovered ? 'column-option twitch hover' : 'column-option twitch'}
+                        onMouseEnter={() => this.setTwitchHovered(true)}
+                        onMouseLeave={() => this.setTwitchHovered(false)}>
+                            Content Creator
+                            <div className={this.state.twitchHovered ? 'coming-soon show' : 'coming-soon'}>
+                                Coming Soon!
+                            </div>
+                    </div>
                     <div className="column-option pro" onClick={this.goTo.bind(this, '/professional')}>Professional</div>
                     <div className="column-option music">Musician</div>
                 </div>
             </div>
         );
+    }
+
+    setTwitchHovered(hovering: boolean): void {
+        this.setState({
+            twitchHovered: hovering,
+        });
     }
 
     goTo(url: string): void {
