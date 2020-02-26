@@ -19,11 +19,15 @@ export class MainInfo extends React.Component<{}> {
                 </div>
                 <div className="column-wrapper">
                     <div className="column-option twitch">Content Creator</div>
-                    <div className="column-option pro">Professional</div>
+                    <div className="column-option pro" onClick={this.goTo.bind(this, '/professional')}>Professional</div>
                     <div className="column-option music">Musician</div>
                 </div>
             </div>
         );
+    }
+
+    goTo(url: string): void {
+        window.location.assign(url);
     }
 }
 

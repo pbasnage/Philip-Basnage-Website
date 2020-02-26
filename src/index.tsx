@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './index.scss';
 import { MainInfo } from './main';
 import { SquareProps } from './interfaces/square.interface';
 import { MainProps } from './interfaces/main.interface';
 import { BoardProps } from './interfaces/board.interface';
 import { GameProps, GameState } from './interfaces/game.interface';
+import { Professional } from "./components/professional";
 
 
 function Square(props: SquareProps): JSX.Element {
@@ -159,6 +161,9 @@ class Game extends React.Component<GameProps, GameState> {
 
 ReactDOM.render(
     <Router>
-        <Main />
+        <Switch>
+            <Route path="/" exact component={Main} />
+            <Route path="/professional" exact component={Professional} />
+        </Switch>
     </Router>
 , document.getElementById('root'));
