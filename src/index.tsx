@@ -8,7 +8,7 @@ import { SquareProps } from './interfaces/square.interface';
 import { MainProps } from './interfaces/main.interface';
 import { BoardProps } from './interfaces/board.interface';
 import { GameProps, GameState } from './interfaces/game.interface';
-import { Professional } from "./components/professional";
+import { Professional } from "./components/professional/professional.component";
 
 
 function Square(props: SquareProps): JSX.Element {
@@ -162,6 +162,7 @@ class Game extends React.Component<GameProps, GameState> {
 ReactDOM.render(
     <Router>
         <Switch>
+            <Route path="/main" exact component={Main} />
             <Route path="/" exact component={Main} />
             <Route path="/professional" exact component={Professional} />
         </Switch>
