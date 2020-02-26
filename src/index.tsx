@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.scss';
 import { MainInfo } from './main';
 import { SquareProps } from './interfaces/square.interface';
 import { MainProps } from './interfaces/main.interface';
 import { BoardProps } from './interfaces/board.interface';
 import { GameProps, GameState } from './interfaces/game.interface';
+
 
 function Square(props: SquareProps): JSX.Element {
     return (
@@ -15,7 +17,7 @@ function Square(props: SquareProps): JSX.Element {
     );
 }
 
-class Main extends React.Component {
+export class Main extends React.Component {
     constructor(props: MainProps) {
         super(props);
         document.title = 'Philip Basnage';
@@ -155,4 +157,8 @@ class Game extends React.Component<GameProps, GameState> {
 
 // ========================================
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(
+    <Router>
+        <Main />
+    </Router>
+, document.getElementById('root'));
