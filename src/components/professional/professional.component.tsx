@@ -14,7 +14,10 @@ export class Professional extends React.Component {
     render(): JSX.Element {
         return (
             <div className="professional-wrapper"> 
-                <div className="main-header">Philip Basnage: Professional</div>
+                <div className="main-header">
+                    Philip Basnage: Professional
+                    <div className="back-button" onClick={this.goToMain}>&lt;&nbsp;HOME</div>
+                </div>
                 <div className="panels-container">
                     <div className="panel">
                         <div className="panel-title">
@@ -45,5 +48,9 @@ export class Professional extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    goToMain(): void {
+        window.location.assign("/");
     }
 }

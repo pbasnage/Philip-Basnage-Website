@@ -1,8 +1,16 @@
 @import '../../common.scss';
 
 .main-header {
+    position: relative;
     background-color: $linkedinblue;
     color: white;
+    .back-button {
+        position: absolute;
+        left: 25px;
+        top: 31px;
+        font-size: 20px;
+        cursor: pointer;
+    }
 }
 
 .panels-container {
