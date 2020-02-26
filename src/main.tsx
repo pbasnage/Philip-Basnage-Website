@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.scss';
 import { MainProps, MainState } from './interfaces/main.interface';
+import ProfilePic from './images/proftmp.png';
 
 export class MainInfo extends React.Component<MainProps, MainState> {
     constructor(props: MainProps) {
@@ -18,10 +19,15 @@ export class MainInfo extends React.Component<MainProps, MainState> {
             <div>
                 <div className="main-header">Philip Basnage</div>
                 <div className="main-summary">
-                    Welcome to my website! I&apos;m a multi-talented professional with a wide range of interests and
-                    skills. This website is hand-coded by myself using ReactJS and Typescript. If you&apos;re interested
-                    in my resume or hiring, please click &apos;Professional&apos;. Otherwise feel free to check out my
-                    side projects, which I&apos;m equally passionate about.
+                    <div className="pic-container">
+                        <img src={ProfilePic} alt="" className="profile"/>
+                    </div>
+                    <div className="text">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Welcome to my website! I&apos;m a multi-talented professional with a wide range of interests and
+                        skills. This website is hand-coded by myself using ReactJS and Typescript. If you&apos;re interested
+                        in my resume or hiring, please click &apos;Professional&apos;. Otherwise feel free to check out my
+                        side projects, which I&apos;m equally passionate about.
+                    </div>
                 </div>
                 <div className="column-wrapper">
                     <div className='column-option twitch'

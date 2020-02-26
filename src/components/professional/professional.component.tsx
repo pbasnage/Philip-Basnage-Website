@@ -23,10 +23,10 @@ export class Professional extends React.Component {
                     <img src={ProfilePic} alt="" className="profile"/>
                     <div className="contact-info">
                         <div className="title">Contact Information</div>
-                        <div>pbasnage@gmail.com</div>
+                        <div>Email: pbasnage@gmail.com</div>
                         <div>LinkedIn: https://www.linkedin.com/in/philipbasnage/</div>
                         <div>Github: https://github.com/pbasnage/Philip-Basnage-Website</div>
-                        <div>San Mateo, California</div>
+                        <div>San Francisco, California</div>
                     </div>
                 </div>
                 <div className="panels-container">
