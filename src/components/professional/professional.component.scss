@@ -4,12 +4,21 @@
     position: relative;
     background-color: $linkedinblue;
     color: white;
+    text-align: center;
     .back-button {
         position: absolute;
-        left: 25px;
-        top: 31px;
+        left: 10px;
         font-size: 20px;
         cursor: pointer;
+        .home {
+            display: none;
+            @media (min-width: $medium-width) {
+                display: inline;
+            }
+        }
+    }
+    @media (max-width: $medium-width) {
+        font-size: 1.625em;
     }
 }
 

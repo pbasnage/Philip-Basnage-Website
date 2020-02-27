@@ -11,7 +11,10 @@ export class Professional extends React.Component<ProfessionalProps> {
             <div className="professional-wrapper"> 
                 <div className="main-header">
                     Philip Basnage: Software Engineer
-                    <div className="back-button" onClick={this.goToMain}>&lt;&nbsp;HOME</div>
+                    <div className="back-button" onClick={this.goToMain}>
+                        &lt;&nbsp;
+                        <div className="home">HOME</div>
+                        </div>
                 </div>
                 <div className="main-info">
                     <img src={ProfilePic} alt="" className="profile"/>
