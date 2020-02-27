@@ -97,3 +97,21 @@
     }
 }
 
+.resume-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+
+    .resume-button {
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: $linkedinblue;
+        color: white;
+    }
+}

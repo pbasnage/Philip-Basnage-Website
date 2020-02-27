@@ -1,22 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { ProfessionalProps } from '../../interfaces/professional.interface';
 import '../../main.scss';
 import './professional.component.scss';
 import LehighCrest from '../../images/lehighcrest.png';
 import ProfilePic from '../../images/proftmp.png';
 
-export class Professional extends React.Component {
-
-    constructor(props: ProfessionalProps) {
-        super(props);
-
-    }
+export class Professional extends React.Component<ProfessionalProps> {
     render(): JSX.Element {
         return (
             <div className="professional-wrapper"> 
                 <div className="main-header">
-                    Philip Basnage: Professional
+                    Philip Basnage: Software Engineer
                     <div className="back-button" onClick={this.goToMain}>&lt;&nbsp;HOME</div>
                 </div>
                 <div className="main-info">
@@ -27,6 +21,11 @@ export class Professional extends React.Component {
                         <div>LinkedIn: https://www.linkedin.com/in/philipbasnage/</div>
                         <div>Github: https://github.com/pbasnage/Philip-Basnage-Website</div>
                         <div>San Francisco, California</div>
+                    </div>
+                </div>
+                <div className="resume-row">
+                    <div className="resume-button" onClick={this.goToResume}>
+                        Click Here to View and Download My Latest Resume
                     </div>
                 </div>
                 <div className="panels-container">
@@ -59,6 +58,10 @@ export class Professional extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    goToResume(): void {
+        window.open("https://drive.google.com/open?id=1mr1UXvWbdgBcsiQjjZGUpy5f248zUplm", "_blank");
     }
 
     goToMain(): void {
