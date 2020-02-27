@@ -21,8 +21,8 @@ export class Professional extends React.Component<ProfessionalProps> {
                     <div className="contact-info">
                         <div className="title">Contact Information</div>
                         <div>Email: pbasnage@gmail.com</div>
-                        <div>LinkedIn: https://www.linkedin.com/in/philipbasnage/</div>
-                        <div>Github: https://github.com/pbasnage/Philip-Basnage-Website</div>
+                        <div className="clickable link" onClick={this.openLinkedIn}>LinkedIn: https://www.linkedin.com/in/philipbasnage/</div>
+                        <div className="clickable link" onClick={this.openWebsiteRepo}>Github: https://github.com/pbasnage/Philip-Basnage-Website</div>
                         <div>San Francisco, California</div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ export class Professional extends React.Component<ProfessionalProps> {
                             Work Experience
                         </div>
                         <div className="panel-body vert">
-                            <div className="subtitle">Software Engineer at MyTime (Contract)</div>
+                            <div className="subtitle">Contract Engineering (MyTime)</div>
                             <i>September – November 2019, San Francisco, California</i>
                             <div>
                                 Remote contract position where I created functional webpages from design mockups and specs. 
@@ -139,6 +139,14 @@ export class Professional extends React.Component<ProfessionalProps> {
 
     openTrelloClone(): void {
         window.open("https://github.com/pbasnage/Trello-Clone");
+    }
+
+    openLinkedIn(): void {
+        window.open("https://www.linkedin.com/in/philipbasnage/");
+    }
+
+    openWebsiteRepo(): void {
+        window.open("https://github.com/pbasnage/Philip-Basnage-Website");
     }
 
     goToMain(): void {

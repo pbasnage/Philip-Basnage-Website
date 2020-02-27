@@ -9,12 +9,16 @@
         position: absolute;
         left: 10px;
         font-size: 20px;
+        transition: all .1s ease-in-out;
         cursor: pointer;
         .home {
             display: none;
             @media (min-width: $medium-width) {
                 display: inline;
-            }
+            } 
+        }
+        &:hover {
+            transform: scale(1.05);
         }
     }
     @media (max-width: $medium-width) {
@@ -109,6 +113,7 @@
     background-color: white;
 
     .resume-button {
+        transition: all .1s ease-in-out;
         cursor: pointer;
         padding: 10px;
         margin: 10px 0;
@@ -116,5 +121,15 @@
         border-radius: 5px;
         background-color: $linkedinblue;
         color: white;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.link {
+    transition: all .1s ease-in-out;
+    &:hover {
+        color: lightskyblue;
     }
 }
