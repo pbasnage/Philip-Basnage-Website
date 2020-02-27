@@ -42,18 +42,35 @@ export class Professional extends React.Component<ProfessionalProps> {
                             degree in Computer Science from Lehigh University.
                         </div>
                     </div>
-                    <div className="panel-edu">
-                        <div className="flex-column">
-                            <div className="panel-title">
-                                Education
-                            </div>
-                            <div className="panel-body">
+                    <div className="panel">
+                        <div className="panel-title">
+                            Education
+                        </div>
+                        <div className="panel-body">
+                            <div>
                                 Graduated from Lehigh University in May 2017 with a Bachelor's
                                 of Science degree in Computer Science from PC Rossin College of
                                 Engineering and Applied Science. Awarded Dean's List multiple semesters.
                             </div>
+                            <img src={LehighCrest} alt="" className="lehigh-crest"/>
                         </div>
-                        <img src={LehighCrest} alt="" className="lehigh-crest"/>
+                    </div>
+                    <div className="panel">
+                        <div className="panel-title">
+                            Skills &amp; Technologies
+                        </div>
+                        <div className="panel-body vert">
+                            <div><b>Expert:&nbsp;</b>
+                                Typescript, Javascript, ES6, Angular2+, HTML5, CSS, SASS, Flexbox,
+                                Bootstrap, Responsive Layout, Agile, Scrum, Trello, Git, Github
+                            </div>
+                            <div>
+                                <b>Experience With:&nbsp;</b>
+                                ReactJS, NodeJS, PHP, SQL, Bash, ExpressJS, MongoDB, Mongoose, jQuery,
+                                AWS, Sentry, Splunk, REST, Docker, CI, Jenkins, Python, C, C++, Ruby,
+                                Assembly
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -44,6 +44,7 @@
 
 .panels-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -52,7 +53,8 @@
     flex-direction: column;
     padding: 15px 20px 20px 30px;
     margin: 20px;
-    max-width: 600px;
+    min-width: 400px;
+    max-width: 550px;
     min-height: 160px;
     background-color: white;
     border: 1px solid grey;
@@ -63,38 +65,19 @@
     }
     .panel-body {
         margin-top: 5px;
+        display: flex;
+
+        &.vert {
+            flex-direction: column;
+        }
     }
 }
 
-.panel-edu {
-    display: flex;
-    padding: 15px 20px 20px 30px;
-    margin: 20px;
-    max-width: 500px;
-    height: 160px;
-    background-color: white;
-    border: 1px solid grey;
-    box-shadow: 2px 2px 2px black;
-
-    .flex-column {
-        display: flex;
-        flex-direction: column;
-        .panel-title {
-            font-size: 2em; 
-        }
-        .panel-body {
-            margin-top: 5px;
-            display: flex;
-        }
-    }
-
-    .lehigh-crest {
-        max-width: 120px;
-        max-height: 120px;
-        width: auto;
-        height: auto;
-        margin-top: 1.5em;
-    }
+.lehigh-crest {
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
 }
 
 .resume-row {
