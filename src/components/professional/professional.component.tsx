@@ -49,10 +49,42 @@ export class Professional extends React.Component<ProfessionalProps> {
                         <div className="panel-body">
                             <div>
                                 Graduated from Lehigh University in May 2017 with a Bachelor's
-                                of Science degree in Computer Science from PC Rossin College of
-                                Engineering and Applied Science. Awarded Dean's List multiple semesters.
+                                of Science degree in Computer Science from the PC Rossin College of
+                                Engineering and Applied Science. Concentration in Japanese;
+                                Awarded Dean's List multiple semesters.
                             </div>
                             <img src={LehighCrest} alt="" className="lehigh-crest"/>
+                        </div>
+                    </div>
+                    <div className="panel work">
+                        <div className="panel-title">
+                            Work Experience
+                        </div>
+                        <div className="panel-body vert">
+                            <div className="subtitle">Software Engineer at MyTime (Contract)</div>
+                            <i>September – November 2019, San Francisco, California</i>
+                            <div>
+                                Remote contract position where I created functional webpages from design mockups and specs. 
+                                Refactored AngularJS &amp; Embedded Ruby files to Angular7 + Typescript; Wrote tests
+                                for existing APIs and classes.
+                            </div>
+                            <div className="subtitle">Software Engineer at TreeRing</div>
+                            <i>June 2016 – September 2019, San Mateo, California</i>
+                            <div>  
+                                Created the foundation for the HTML5/Angular2+ overhaul of their existing Flash-based product.
+                                Directly influenced creation of product-level software; spearheaded a responsive-first restructure for the entire application.
+                                Worked closely with the CEO and CTO to revise a successful product to incorporate modern programming standards and techniques.
+                                Advised senior engineering team on new technologies.
+                                Collaborated with multi-disciplinary team in a full-stack environment.
+                                Worked directly with every level of company including webpage design, UI, UX, and engineering.
+                            </div>
+                            <div className="subtitle">Research Intern at Taiho Pharmaceutical</div>
+                            <i>June – August 2015, Tokushima, Japan</i>
+                            <div>  
+                                Selected for proficient Japanese language skills and academic excellence to study abroad in Tokushima, Japan through Lehigh University’s prestigious Iacocca Internship Program.
+                                Shadowed researchers and invented new tablet formulations.
+                                Created and delivered presentations on project progress to company leadership.
+                            </div>
                         </div>
                     </div>
                     <div className="panel">
@@ -60,18 +92,39 @@ export class Professional extends React.Component<ProfessionalProps> {
                             Skills &amp; Technologies
                         </div>
                         <div className="panel-body vert">
-                            <div><b>Expert:&nbsp;</b>
+                            <div>
+                                <div className="subtitle">Expert:&nbsp;</div>
                                 Typescript, Javascript, ES6, Angular2+, HTML5, CSS, SASS, Flexbox,
                                 Bootstrap, Responsive Layout, Agile, Scrum, Trello, Git, Github
                             </div>
                             <div>
-                                <b>Experience With:&nbsp;</b>
+                                <div className="subtitle">Experience With:&nbsp;</div>
                                 ReactJS, NodeJS, PHP, SQL, Bash, ExpressJS, MongoDB, Mongoose, jQuery,
                                 AWS, Sentry, Splunk, REST, Docker, CI, Jenkins, Python, C, C++, Ruby,
                                 Assembly
                             </div>
                         </div>
                     </div>
+                    <div className="panel">
+                        <div className="panel-title">
+                            Projects
+                        </div>
+                        <div className="panel-body vert">
+                            <div className="subtitle clickable" onClick={this.openTrelloClone}>Trello Clone (link)</div>
+                            <div>
+                                Developed RESTful CRUD APIs to manage a Trello-like application
+                                with boards, columns, and tasks. Designed an Angular8-based UI that
+                                allows a user to communicate with these APIs using NodeJS and ExpressJS,
+                                and these changes persist to the Mongoose/MongoDB database.
+                            </div>
+                            <div className="subtitle">UStocks</div>
+                            <div>  
+                                Created a web application that aggregates stock information and scrapes relevant
+                                internet articles to give an average sentiment for any NYSE/NASDAQ listed stock.
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
             </div>
         );
@@ -79,6 +132,10 @@ export class Professional extends React.Component<ProfessionalProps> {
 
     goToResume(): void {
         window.open("https://drive.google.com/open?id=1mr1UXvWbdgBcsiQjjZGUpy5f248zUplm", "_blank");
+    }
+
+    openTrelloClone(): void {
+        window.open("https://github.com/pbasnage/Trello-Clone");
     }
 
     goToMain(): void {

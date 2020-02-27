@@ -70,6 +70,17 @@
         &.vert {
             flex-direction: column;
         }
+
+        .subtitle {
+            font-weight: bold;
+            color: $linkedinblue;
+            font-size: 1.125em;
+            margin-top: 5px;
+        }
+    }
+
+    &.work {
+        max-width: 1192px;
     }
 }
 
