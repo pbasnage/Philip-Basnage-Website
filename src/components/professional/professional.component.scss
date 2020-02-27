@@ -66,12 +66,17 @@
     flex-direction: column;
     padding: 15px 20px 20px 30px;
     margin: 20px;
-    min-width: 400px;
+    min-width: 290px;
     max-width: 550px;
     min-height: 160px;
     background-color: white;
     border: 1px solid grey;
     box-shadow: 2px 2px 2px black;
+
+    @media (min-width: $medium-width) {
+        min-width: 400px;
+        max-width: 550px;
+    }
 
     .panel-title {
         font-size: 2em; 

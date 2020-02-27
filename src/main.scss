@@ -16,6 +16,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	margin: 20px 0;
 	background-color: white;
 
@@ -23,7 +24,7 @@
 		display: flex;
 		align-items: center;
 		max-width: 600px;
-		margin-left: 20px;
+		margin: 10px 0 10px 20px;
 	}
 }
 
@@ -40,21 +41,35 @@
 
 .column-wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+
+	@media (min-width: $large-width) {
+		flex-direction: row;
+	}
 
 	.column-option {
-		width: 270px;
-		height: 400px;
+		min-width: 350px;
+		height: 350px;
 		border: 1px solid #3d3b36;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin: 0 10px;
+		margin-bottom: 20px;
 		font-size: 18pt;
 		transition: all .2s ease-in-out;
 		color: white;
 		box-shadow: 2px 2px 2px grey;
+
+		@media (min-width: $large-width) {
+			flex-direction: row;
+			max-width: 600px;
+			min-width: 300px;
+		}
 
 		&.twitch {
 			background-color: $twitchpurple;
@@ -77,7 +92,8 @@
 		}
 
 		&.pro {
-			width: 350px;
+			min-width: 350px;
+			max-width: 400px;
 			font-size: 22pt;
 			background-color: $linkedinblue;
 		}
