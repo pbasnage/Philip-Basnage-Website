@@ -134,7 +134,7 @@ export class Professional extends React.Component<ProfessionalProps> {
     }
 
     goToResume(): void {
-        window.open("https://drive.google.com/open?id=1mr1UXvWbdgBcsiQjjZGUpy5f248zUplm", "_blank");
+        window.open("https://drive.google.com/file/d/136SOy-BPHv3ZHla1hMzsx6B7bxGXshoN/view?usp=sharing", "_blank");
     }
 
     openTrelloClone(): void {
